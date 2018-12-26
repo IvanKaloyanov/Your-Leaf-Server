@@ -19,37 +19,37 @@ const char* ROUTER_PASSWORD = "Rossonero";
 // Leaf password
 const char* PASSWORD = "1001100001011110000110011";
 
-// routes
+// Routes
 const char* LOGIN_ROUTE = "/login";
 const char* WATERING_ROUTE = "/watering";
 const char* LIGHTNING_ROUTE = "/lightning";
 const char* TEMPERATURE_ROUTE = "/temperature";
 
-// request consts
+// Request consts
 const char* TEXT_PLAIN = "text/plain";
 const char* APPLICATION_JSON = "application/json";
 const char* WATERING_ARGUMENT = "amount";
 
-// status codes consts
+// Status codes consts
 const int STATUS_OKAY = 200;
 const int STATUS_NOT_FOUNT = 404;
 const int STATUS_UNAUTHORIZED = 401;
 
-// server
+// Server
 ESP8266WebServer server(80);
 
-// temperature sensor
+// Temperature sensor
 dht DHT;
 
-// temperature manage
+// Temperature manage
 float temperatureSensorValue = 0;
 bool heatingState = false;
 
-// watering manage
+// Watering manage
 float soilSensorValue = 0;  
 float soilSensorOptimal = 13; // set it yourself based on your plant. 
 
-// lightning manage
+// Lightning manage
 float lightningSensorValue = 0;
 bool lightningState = false;
 
@@ -57,7 +57,6 @@ bool lightningState = false;
 void handleWateringGet(){
   // Check the credentials
   if (server.authenticate("", PASSWORD)) {
-    
     // Get the SEN-13322 sensor data and retrive it
     int soilSensorCrn = analogRead(WATERING_SENSOR_PIN);
     
@@ -92,7 +91,6 @@ void handleWateringPost(){
 void handleLightningGet(){
   // Check the credentials 
   if (server.authenticate("", PASSWORD)) {
-    
     // Get the photoresistor data and retrive it
     int lightSensorCrn = analogRead(LIGHTNING_SENSOR_PIN);
     lightningSensorValue = (lightSensorCrn / 1023) * 100;
@@ -200,7 +198,6 @@ String boolToString(bool state){
 }
  
 void setup(void){
-  
   // Setup the port communication
   Serial.begin(115200);
 
