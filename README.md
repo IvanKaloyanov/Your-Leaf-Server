@@ -32,9 +32,9 @@ For our prototype we've used only 2 external libraries. DHT for easier adjustmen
 
 # Our Cause
 Our cause is to encourage the growth of fresh veggies/plants at home. That's why in order to help people to do this easily we've made the YourLeaf platform. 
-<b>For every single one of the first 100 people who implement our system and start to grow veggies at there homes we will plant a tree.</b>
+<b>We will plat a tree for every single one of the first 100 people who implement our system and start to growing veggies at there homes.</b>
 
 # Twinck it
-Modify, break, update and stay curious. Hit me up with your changes or questions and like awayse feel free to coppy and paste.
+Modify, break, update and stay curious. Hit me up with your changes or questions and like alwayse feel free to coppy and paste.
 
 
